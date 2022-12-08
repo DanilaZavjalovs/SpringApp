@@ -33,7 +33,7 @@ public class LoginController {
         ModelAndView view = new ModelAndView("login");
 
         if(!repository.findByNameAndPassword(user.getName(), user.getPassword()).isEmpty()) {
-            Optional<UserClass> userProfile = repository.findByName(user.getName());
+            Optional<UserClass> userProfile = repository.findById(user.getId());
 
             if (userProfile.isPresent()) {
                 view.setViewName("profile");

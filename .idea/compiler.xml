@@ -12,8 +12,5 @@
         <module name="Spring-project.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Spring-project" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
