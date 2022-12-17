@@ -2,6 +2,7 @@ package com.local.springproject.api;
 
 import com.local.springproject.User.UserClass;
 import com.local.springproject.api.service.UserServiceImpl;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/user")
+@PreAuthorize("isAuthenticated()")
 public class UserController {
 
     private final UserServiceImpl userService;

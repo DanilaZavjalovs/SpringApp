@@ -48,6 +48,10 @@
     <img th:src="${UserProfile.getImageURL()}" alt="profile image" style="width:100%">
     <h1 th:text="${UserProfile.getName()}"></h1>
     <h2 th:text="${UserProfile.getDescription()}"></h2>
+
+    <br></br>
+
+    <a href="/logout">Log out</a>
 </div>
 
 </body>

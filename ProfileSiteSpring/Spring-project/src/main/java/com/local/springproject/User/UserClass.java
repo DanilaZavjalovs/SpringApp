@@ -11,7 +11,7 @@ import java.util.Collections;
 
 @Data
 @Entity
-@Table(name = "UserData")
+@Table(name = "user_data")
 public class UserClass implements UserDetails {
 
     @Id
@@ -58,7 +58,7 @@ public class UserClass implements UserDetails {
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
