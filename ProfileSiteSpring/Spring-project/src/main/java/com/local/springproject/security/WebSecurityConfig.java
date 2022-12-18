@@ -37,6 +37,8 @@ public class WebSecurityConfig {
                 .and()
                 .formLogin()
                 .and()
+                .oauth2Login()
+                .and()
                 .build();
     }
 
