@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "user_statistics")
-public class UserStatistics {
+public class UserStatistics implements Comparable<UserStatistics> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -22,5 +22,19 @@ public class UserStatistics {
 
     public int getCount() {
         return count;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public int compareTo(UserStatistics o) {
+        if(getCount() == o.getCount())
+            return 0;
+        else if(getCount() > o.getCount())
+            return -1;
+        else
+            return 1;
     }
 }

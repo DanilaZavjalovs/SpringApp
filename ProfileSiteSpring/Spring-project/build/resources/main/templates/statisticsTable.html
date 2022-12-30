@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+  <style>
+    .Users_statistics {
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .Users_statistics thead tr {
+      background-color: #009879;
+      color: #ffffff;
+      text-align: left;
+    }
+
+    .Users_statistics th,
+    .Users_statistics td {
+      padding: 12px 15px;
+    }
+
+    .Users_statistics tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .Users_statistics tbody tr:last-of-type {
+      border-bottom: 2px solid #009879;
+    }
+
+  </style>
+
+  <table class="Users_statistics">
+    <tbody>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Count of calls</th>
+    </tr>
+    </thead>
+    <th:block th:each="user : ${listStatistics}">
+      <tr>
+        <td th:text="${user.name}">...</td>
+        <td th:text="${user.count}">...</td>
+      </tr>
+    </th:block>
+    </tbody>
+  </table>
+</html>
