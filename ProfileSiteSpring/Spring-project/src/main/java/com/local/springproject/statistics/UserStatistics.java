@@ -1,12 +1,16 @@
 package com.local.springproject.statistics;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "user_statistics")
 public class UserStatistics implements Comparable<UserStatistics> {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")
     private Integer id;
 
@@ -26,6 +30,10 @@ public class UserStatistics implements Comparable<UserStatistics> {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override

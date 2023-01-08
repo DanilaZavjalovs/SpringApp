@@ -1,2 +1,9 @@
 ProfileSiteSpring/Spring-project/build/resources/main/application.properties
 ProfileSiteSpring/Spring-project/build/resources/main/application.properties
+ProfileSiteSpring/Spring-project/.gradle/7.5/executionHistory/executionHistory.bin
+ProfileSiteSpring/Spring-project/.gradle/7.5/executionHistory/executionHistory.bin
+ProfileSiteSpring/Spring-project/.gradle/7.5/executionHistory/executionHistory.lock
+*.bin
+*.lock
+*.probe
+*.bin

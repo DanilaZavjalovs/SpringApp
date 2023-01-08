@@ -15,20 +15,25 @@ import java.util.Collections;
 public class UserClass implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")
     private Integer id;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "password")
     private String password;
+
     @Column(name = "description")
     private String description;
+
     @Column(name = "image")
     private String imageURL;
+
     @Column(name = "Role")
     @Enumerated(EnumType.STRING)
-    private AppUserRole appUserRole;
+    private AppUserRole appUserRole = AppUserRole.USER;
 
     public UserClass(int id, String name, String password) {
         this.id = id;
